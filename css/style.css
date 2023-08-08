@@ -1,0 +1,129 @@
+:root {
+  --main-color: #2c5364;
+  --secondary-color: #f8f8f8;
+  --third-color: #203a43;
+  --logo-color: #ec3586;
+  --purple: rgb(180, 68, 228);
+  --pink: rgb(244, 143, 177);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  background: var(--main-bg);
+  color: var(--main-text);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+@media (max-width: 700px) {
+  body main {
+    scroll-snap-type: none;
+  }
+}
+body main::-webkit-scrollbar {
+  width: 0.3em;
+}
+body main::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+body main::-webkit-scrollbar-thumb {
+  background-color: #282828;
+}
+body main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+body main section:nth-of-type(1) {
+  background-color: var(--third-color);
+  background-image: radial-gradient(#203a43 10%, transparent 7%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-repeat: repeat;
+  color: var(--secondary-color);
+  min-height: calc(100vh - 50px);
+  margin-top: 50px;
+  scroll-snap-align: end;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+body main section:nth-of-type(1) a {
+  background: var(--logo-color);
+  font-weight: 700;
+}
+body main section:nth-of-type(1) a:nth-of-type(1) {
+  background: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+body main section:nth-of-type(1) a:nth-of-type(1):hover {
+  background: white;
+  border: 2px solid var(--secondary-color);
+  color: var(--logo-color);
+}
+body main section:nth-of-type(1) .text {
+  color: var(--logo-color);
+}
+body main section:nth-of-type(2) {
+  background-color: var(--secondary-color);
+  background-image: radial-gradient(#203a43 1%, transparent 7%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-repeat: repeat;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media (max-width: 700px) {
+  body main section:nth-of-type(2) {
+    flex-direction: column;
+  }
+}
+body main section:nth-of-type(3) {
+  background-color: #203a43;
+  background-image: radial-gradient(#2c5364 10%, transparent 7%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-repeat: repeat;
+  color: #f8f8f8;
+}
+body main section:nth-of-type(4) {
+  background: #ec3586;
+  background: linear-gradient(90deg, #ec3586 0%, #f48fb1 100%);
+  color: var(--secondary-color);
+}
+body main section:nth-of-type(5) {
+  background-color: var(--third-color);
+}
+body main section:nth-of-type(5) .calendly-inline-widget::-webkit-scrollbar {
+  width: 0.3em;
+}
+body main section:nth-of-type(5) .calendly-inline-widget::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+body main section:nth-of-type(5) .calendly-inline-widget::-webkit-scrollbar-thumb {
+  background-color: #282828;
+}/*# sourceMappingURL=style.css.map */
